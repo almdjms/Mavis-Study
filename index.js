@@ -1673,8 +1673,9 @@ async function start() {
   });
 
   if (!state.creds.registered) {
-  const num = '51974926627'; // tu número
-  console.log('Código:', await sock.requestPairingCode(num));
+    const num = '51974926627';
+    const code = await sock.requestPairingCode(num);
+    console.log('Código:', code);
 }
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
