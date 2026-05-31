@@ -1670,10 +1670,12 @@ async function start() {
   sock.ev.on('creds.update', saveCreds);
   sock.ev.on('connection.update', async ({ connection, lastDisconnect }) => {
     if (connection === 'open') console.log('◇ Conectado');
+
     if (connection === 'close') {
-    console.log('Reconectando...');
-    setTimeout(start, 5000);
-}
+        console.log('Reconectando...');
+        setTimeout(start, 5000);
+    }
+});
       } else setTimeout(start, 3000);
     }
   });
