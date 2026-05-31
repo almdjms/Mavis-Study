@@ -1657,12 +1657,15 @@ async function start() {
   const { state, saveCreds } = await useMultiFileAuthState(SESSION_PATH);
   const { version } = await fetchLatestBaileysVersion();
   const sock = makeWASocket({
-  connectTimeoutMs: 60000,
-keepAliveIntervalMs: 10000, 
-   version, logger: P({ level: 'silent' }), auth: state,
-    printQRInTerminal: false, browser: Browsers.ubuntu('Chrome'),
-    shouldIgnoreJid: jid => jid?.endsWith('@broadcast')
-  });
+    version,
+    logger: P({ level: 'silent' }),
+    auth: state,
+    printQRInTerminal: false,
+    browser: Browsers.ubuntu('Chrome'),
+    shouldIgnoreJid: jid => jid?.endsWith('@broadcast'),
+    connectTimeoutMs: 60000,
+    keepAliveIntervalMs: 10000
+});
 
   sock.ev.on('creds.update', saveCreds);
   sock.ev.on('connection.update', async ({ connection, lastDisconnect }) => {
