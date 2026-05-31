@@ -1671,25 +1671,31 @@ async function start() {
 
   sock.ev.on('creds.update', saveCreds);
   sock.ev.on('connection.update', async (update) => {
-    const { connection, lastDisconnect } = update;
-    
+    const { connection } = update;
+
     if (connection === 'connecting') {
         console.log('Conectando...');
     }
-    
+
     if (connection === 'open') {
         console.log('¡Conectado con éxito!');
     }
-    
+
     if (connection === 'close') {
         console.log('Conexión cerrada');
-        // Lógica de reconexión estándar de Baileys
-        const shouldReconnect = (lastDisconnect?.error?.output?.statusCode !== 401); // 401 significa que debes volver a escanear/vincular
-        if (shouldReconnect) {
-            console.log('Reconectando...');
-            start(); // Vuelve a iniciar la función del bot
-        }
     }
+});
+
+if (!sock.authState?.creds?.registered) {
+    setTimeout(async () => {
+        try {
+            const code = await sock.requestPairingCode('51974926627');
+            console.log('Código:', code);
+        } catch (e) {
+            console.error('Error al pedir código:', e);
+        }
+    }, 5000);
+}
 });
 
 // SOLICITAR EL CÓDIGO FUERA DEL EVENTO O BIEN CONTROLADO
