@@ -26,6 +26,7 @@ app.listen(process.env.PORT || 3000);
 const SESSION_PATH = './auth';
 const TEMP_DIR = './tmp';
 const CACHE_DIR = './cache';
+
 const AUDIO_CACHE = path.join(CACHE_DIR, 'audio');
 const VIDEO_CACHE = path.join(CACHE_DIR, 'video');
 
@@ -36,8 +37,7 @@ const IMPORT_PATH = path.join(GACHA_PATH, 'import');
 const CHARACTERS_FILE = path.join(GACHA_PATH, 'characters.json');
 const VIDEOS_FILE = path.join(GACHA_PATH, 'videos.json');
 const SERIES_DIR = path.join(GACHA_PATH, 'series');
-const TEMP_DIR = './tmp';
-const GACHA_PATH = './gacha';
+
 const DB_FILE = './database.json';
 
 // Crear carpetas necesarias
