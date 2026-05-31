@@ -1669,7 +1669,7 @@ async function start() {
     keepAliveIntervalMs: 10000
 });
 
-  sock.ev.on('creds.update', saveCreds);
+ sock.ev.on('creds.update', saveCreds);
   sock.ev.on('connection.update', async (update) => {
     const { connection } = update;
 
@@ -1685,12 +1685,16 @@ async function start() {
         console.log('Conexión cerrada');
     }
 
-
 if (!state.creds.registered) {
-
-const code = await sock.requestPairingCode('5197492627');
-console.log('Código:', code);
-
+    setTimeout(async () => {
+        try {
+            const code = await 
+sock.requestPairingCode('5197492627');
+            console.log('Código:', code);
+        } catch (e) {
+            console.log(e);
+        }
+    }, 5000);
 }
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
