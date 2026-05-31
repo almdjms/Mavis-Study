@@ -1700,7 +1700,9 @@ if (!sock.authState?.creds?.registered) {
 
 // SOLICITAR EL CÓDIGO FUERA DEL EVENTO O BIEN CONTROLADO
 // Justo después de definir sock.ev.on('creds.update', saveCreds);
-if (!state.creds.registered) {
+if (!state.creds.registered && !global.pairingCodeSent) {
+    global.pairingCodeSent = true;
+
     setTimeout(async () => {
         try {
             const code = await sock.requestPairingCode('51974926627');
