@@ -1673,16 +1673,27 @@ async function start() {
         console.log('◇ Conectado');
     }
 
+    if (connection === 'connecting') {
+        console.log('Conectando...');
+    }
+
     if (connection === 'close') {
         console.log('Conexión cerrada');
     }
-});
 
-if (!state.creds.registered) {
-    const num = '51974926627';
-    const code = await sock.requestPairingCode(num);
-    console.log('Código:', code);
-}
+    if (connection === 'connecting' && !state.creds.registered) {
+        const num = '51974926627';
+        
+        setTimeout(async () => {
+            try {
+                const code = await sock.requestPairingCode(num);
+                console.log('Código:', code);
+            } catch (e) {
+                console.log('Error pairing:', e);
+            }
+        }, 5000);
+    }
+});
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
     if (type !== 'notify') return;
