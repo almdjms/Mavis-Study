@@ -1657,7 +1657,9 @@ async function start() {
   const { state, saveCreds } = await useMultiFileAuthState(SESSION_PATH);
   const { version } = await fetchLatestBaileysVersion();
   const sock = makeWASocket({
-    version, logger: P({ level: 'silent' }), auth: state,
+  connectTimeoutMs: 60000,
+keepAliveIntervalMs: 10000, 
+   version, logger: P({ level: 'silent' }), auth: state,
     printQRInTerminal: false, browser: Browsers.ubuntu('Chrome'),
     shouldIgnoreJid: jid => jid?.endsWith('@broadcast')
   });
@@ -1666,8 +1668,9 @@ async function start() {
   sock.ev.on('connection.update', async ({ connection, lastDisconnect }) => {
     if (connection === 'open') console.log('◇ Conectado');
     if (connection === 'close') {
-      if (lastDisconnect?.error?.output?.statusCode === 401 || lastDisconnect?.error === DisconnectReason.loggedOut) {
-        resetSession(); setTimeout(start, 2000);
+    console.log('Reconectando...');
+    setTimeout(start, 5000);
+}
       } else setTimeout(start, 3000);
     }
   });
