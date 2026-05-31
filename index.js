@@ -1676,9 +1676,6 @@ async function start() {
         setTimeout(start, 5000);
     }
 });
-      } else setTimeout(start, 3000);
-    }
-  });
 
   if (!state.creds.registered) {
     const num = '51974926627';
