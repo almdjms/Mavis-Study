@@ -1686,18 +1686,12 @@ async function start() {
     }
 
 
-if (!sock.authState?.creds?.registered) {
-    setTimeout(async () => {
-        try {
-            const code = await sock.requestPairingCode('51974926627');
-            console.log('Código:', code);
-        } catch (e) {
-            console.error('Error al pedir código:', e);
-        }
-    }, 5000);
-}
-});
+if (!state.creds.registered) {
 
+const code = await sock.requestPairingCode('5197492627');
+console.log('Código:', code);
+
+}
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
     if (type !== 'notify') return;
