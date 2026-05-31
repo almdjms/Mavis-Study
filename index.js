@@ -1700,17 +1700,9 @@ if (!sock.authState?.creds?.registered) {
 
 // SOLICITAR EL CÓDIGO FUERA DEL EVENTO O BIEN CONTROLADO
 // Justo después de definir sock.ev.on('creds.update', saveCreds);
-if (!state.creds.registered && !global.pairingCodeSent) {
-    global.pairingCodeSent = true;
-
-    setTimeout(async () => {
-        try {
-            const code = await sock.requestPairingCode('51974926627');
-            console.log('Código:', code);
-        } catch (e) {
-            console.error('Error al pedir código:', e);
-        }
-    }, 5000);
+if (!sock.authState.creds.registered) {
+    const code = await sock.requestPairingCode('51974926627');
+    console.log('Código:', code);
 }
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
