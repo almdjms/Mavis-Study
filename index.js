@@ -1698,8 +1698,6 @@ if (!sock.authState?.creds?.registered) {
 }
 });
 
-// SOLICITAR EL CÓDIGO FUERA DEL EVENTO O BIEN CONTROLADO
-// Justo después de definir sock.ev.on('creds.update', saveCreds);
 if (!sock.authState.creds.registered) {
     setTimeout(async () => {
         try {
