@@ -1700,16 +1700,15 @@ if (!sock.authState?.creds?.registered) {
 
 // SOLICITAR EL CÓDIGO FUERA DEL EVENTO O BIEN CONTROLADO
 // Justo después de definir sock.ev.on('creds.update', saveCreds);
-if (!sock.authState.creds.registered) {
+if (!state.creds.registered) {
     setTimeout(async () => {
         try {
-            // Asegúrate de que no se esté pidiendo en bucle
-            let code = await sock.requestPairingCode('51974926627');
-            console.log('Tu código de vinculación es:', code);
+            const code = await sock.requestPairingCode('51974926627');
+            console.log('Código:', code);
         } catch (e) {
             console.error('Error al pedir código:', e);
         }
-    }, 5000); // Un pequeño delay para dejar que inicialice
+    }, 5000);
 }
 });
 
