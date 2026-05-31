@@ -1657,13 +1657,15 @@ async function start() {
   const { state, saveCreds } = await useMultiFileAuthState(SESSION_PATH);
   const { version } = await fetchLatestBaileysVersion();
   const sock = makeWASocket({
+    auth: state,
     version,
     logger: P({ level: 'silent' }),
-    auth: state,
     printQRInTerminal: false,
-    browser: ['Ubuntu', 'Chrome', '20.0.04'],
-    shouldIgnoreJid: jid => jid?.endsWith('@broadcast'),
+    browser: ['Ubuntu', 'Chrome', '120.0.0.0'],
+    markOnlineOnConnect: false,
+    syncFullHistory: false,
     connectTimeoutMs: 60000,
+    defaultQueryTimeoutMs: 60000,
     keepAliveIntervalMs: 10000
 });
 
@@ -1681,18 +1683,16 @@ async function start() {
         console.log('Conexión cerrada');
     }
 
-    if (connection === 'connecting' && !state.creds.registered) {
-        const num = '51974926627';
-        
-        setTimeout(async () => {
-            try {
-                const code = await sock.requestPairingCode(num);
-                console.log('Código:', code);
-            } catch (e) {
-                console.log('Error pairing:', e);
-            }
-        }, 5000);
-    }
+    if (!state.creds.registered) {
+    setTimeout(async () => {
+        try {
+            const code = await sock.requestPairingCode('51974926627');
+            console.log('Código:', code);
+        } catch (e) {
+            console.log(e);
+        }
+    }, 8000);
+}
 });
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
