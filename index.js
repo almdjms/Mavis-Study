@@ -1684,7 +1684,7 @@ async function start() {
     if (connection === 'close') {
         console.log('Conexión cerrada');
     }
-});
+
 
 if (!sock.authState?.creds?.registered) {
     setTimeout(async () => {
