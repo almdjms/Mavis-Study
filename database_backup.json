@@ -1,0 +1,207 @@
+{
+  "users": {
+    "52832493387872@lid": {
+      "name": "Enzovegaa",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "191341531267156@lid": {
+      "name": "𝔊𝖊𝖗𝖆𝖗𝖉™",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "199149496602667@lid": {
+      "name": "𝓐𝓼ღ𝓴𝓮𝓷𝓪𝔃 尺3.",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "124627787460840@lid": {
+      "name": "`Alisa ও`",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "274470421938247@lid": {
+      "name": "𝓝𝒾𝓀𝓎 ꫂ❁",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "56573997109482@lid": {
+      "name": "「   ⃟𝓐」 𝒀𝒖𝒕𝒂 𝑶𝒌𝒌𝒐𝒕𝒔𝒖",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "207134058901578@lid": {
+      "name": "緒̼͙̈́⍙𝘿𝙀̶᳢᳢᳢᳢̲ׅׄ⍙𝙇𝙀𝙓𝘿𝚺̲ 0",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "39604497432739@lid": {
+      "name": "「♚  ⃟𝒦 」 𝑀𝑎𝑦`",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "257024382255332@lid": {
+      "name": "L",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "60710117716222@lid": {
+      "name": "𝐑𝐢𝐧ঞ𝐊𝐚𝐠𝐚𝐦𝐢𝐧𝐞",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "184735468888274@lid": {
+      "name": "Yoskendy Ω",
+      "totalCommands": 0,
+      "favCommands": {}
+    },
+    "90220754149388@lid": {
+      "name": "𝑯𝒐𝒎𝒖𝒓𝒂 𝑨𝒌𝒆𝒎𝒊",
+      "totalCommands": 0,
+      "favCommands": {}
+    }
+  },
+  "banners": {},
+  "subbots": {},
+  "groups": {
+    "120363408231424358@g.us": {
+      "muted": [],
+      "antilink": false,
+      "totalMessages": 2,
+      "members": {
+        "52832493387872@lid": {
+          "messages": 2,
+          "firstMessage": 1780197700778,
+          "mentions": 0
+        }
+      },
+      "off": false,
+      "economy": {},
+      "cooldowns": {},
+      "harems": {}
+    },
+    "120363425738922491@g.us": {
+      "muted": [],
+      "antilink": false,
+      "totalMessages": 8,
+      "members": {
+        "191341531267156@lid": {
+          "messages": 4,
+          "firstMessage": 1780197700814,
+          "mentions": 0
+        },
+        "124627787460840@lid": {
+          "messages": 4,
+          "firstMessage": 1780197701984,
+          "mentions": 0
+        }
+      },
+      "off": false,
+      "economy": {},
+      "cooldowns": {},
+      "harems": {}
+    },
+    "120363410289356774@g.us": {
+      "muted": [],
+      "antilink": false,
+      "totalMessages": 10,
+      "members": {
+        "199149496602667@lid": {
+          "messages": 5,
+          "firstMessage": 1780197701392,
+          "mentions": 0
+        },
+        "274470421938247@lid": {
+          "messages": 2,
+          "firstMessage": 1780197703127,
+          "mentions": 0
+        },
+        "207134058901578@lid": {
+          "messages": 2,
+          "firstMessage": 1780197704591,
+          "mentions": 0
+        },
+        "39604497432739@lid": {
+          "messages": 1,
+          "firstMessage": 1780197705321,
+          "mentions": 0
+        },
+        "135811680960555@lid": {
+          "messages": 0,
+          "firstMessage": 1780197705321,
+          "mentions": 1
+        }
+      },
+      "off": false,
+      "economy": {},
+      "cooldowns": {},
+      "harems": {}
+    },
+    "120363408324545984@g.us": {
+      "muted": [],
+      "antilink": false,
+      "totalMessages": 1,
+      "members": {
+        "56573997109482@lid": {
+          "messages": 1,
+          "firstMessage": 1780197703163,
+          "mentions": 0
+        }
+      },
+      "off": false,
+      "economy": {},
+      "cooldowns": {},
+      "harems": {}
+    },
+    "120363427942203201@g.us": {
+      "muted": [],
+      "antilink": false,
+      "totalMessages": 3,
+      "members": {
+        "257024382255332@lid": {
+          "messages": 1,
+          "firstMessage": 1780197712155,
+          "mentions": 0
+        },
+        "60710117716222@lid": {
+          "messages": 2,
+          "firstMessage": 1780197712817,
+          "mentions": 0
+        }
+      },
+      "off": false,
+      "economy": {},
+      "cooldowns": {},
+      "harems": {}
+    },
+    "120363408753910077@g.us": {
+      "muted": [],
+      "antilink": false,
+      "totalMessages": 2,
+      "members": {
+        "184735468888274@lid": {
+          "messages": 1,
+          "firstMessage": 1780197717881,
+          "mentions": 0
+        },
+        "90220754149388@lid": {
+          "messages": 1,
+          "firstMessage": 1780197718168,
+          "mentions": 0
+        }
+      },
+      "off": false,
+      "economy": {},
+      "cooldowns": {},
+      "harems": {}
+    }
+  },
+  "prefix": "/",
+  "globalOff": false,
+  "stats": {
+    "totalCommands": 0
+  },
+  "globalCooldowns": {
+    "vote": {}
+  }
+}

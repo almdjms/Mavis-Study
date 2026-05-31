@@ -1,0 +1,12 @@
+node_modules/
+auth/
+cache/
+temp/
+sessions/
+*.mp4
+*.mp3
+*.zip
+*.jpg
+*.png
+*.webp
+*.gif
