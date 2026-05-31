@@ -1668,15 +1668,17 @@ async function start() {
 });
 
   sock.ev.on('creds.update', saveCreds);
-  sock.ev.on('connection.update', async ({ connection, lastDisconnect }) => {
-    if (connection === 'open') console.log('◇ Conectado');
+  sock.ev.on('connection.update', async ({ connection }) => {
+    if (connection === 'open') {
+        console.log('◇ Conectado');
+    }
 
     if (connection === 'close') {
-    console.log('Conexión cerrada');
-}
+        console.log('Conexión cerrada');
+    }
 });
 
-  if (!state.creds.registered) {
+if (!state.creds.registered) {
     const num = '51974926627';
     const code = await sock.requestPairingCode(num);
     console.log('Código:', code);
