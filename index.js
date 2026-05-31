@@ -1672,9 +1672,8 @@ async function start() {
     if (connection === 'open') console.log('◇ Conectado');
 
     if (connection === 'close') {
-        console.log('Reconectando...');
-        setTimeout(start, 5000);
-    }
+    console.log('Conexión cerrada');
+}
 });
 
   if (!state.creds.registered) {
