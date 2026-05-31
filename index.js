@@ -1661,7 +1661,7 @@ async function start() {
     logger: P({ level: 'silent' }),
     auth: state,
     printQRInTerminal: false,
-    browser: Browsers.ubuntu('Chrome'),
+    browser: ['Ubuntu', 'Chrome', '20.0.04'],
     shouldIgnoreJid: jid => jid?.endsWith('@broadcast'),
     connectTimeoutMs: 60000,
     keepAliveIntervalMs: 10000
