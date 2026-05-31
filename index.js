@@ -24,7 +24,7 @@ app.listen(process.env.PORT || 3000);
 
 // ━━━━━━━ CONFIGURACIÓN DE RUTAS ━━━━━━━
 const SESSION_PATH = './auth';
-const TEMP_DIR = '/data/data/com.termux/files/usr/tmp';
+const TEMP_DIR = './tmp';
 const CACHE_DIR = './cache';
 const AUDIO_CACHE = path.join(CACHE_DIR, 'audio');
 const VIDEO_CACHE = path.join(CACHE_DIR, 'video');
