@@ -1710,7 +1710,6 @@ if (!state.creds.registered) {
         }
     }, 5000);
 }
-});
 
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
     if (type !== 'notify') return;
